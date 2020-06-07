@@ -1,2 +1,24 @@
-%h1 Books#new
-%p Find me in app/views/books/new.html.haml
+%h1 Questions
+
+.book__form
+  = form_for @book do |f|
+
+    .book__form-item
+      = f.label :title
+      = f.text_field :title
+
+    .book__form-item
+      = f.label :overview, "概要"
+      = f.text_field :overview
+
+    .book__form-item
+      = f.label :genre, "ジャンル"
+      = f.select :genre, options_for_select_from_enum(Book, :genre)
+
+    .book__form-item
+      = f.fields_for :questions do |q|
+        = q.label :item
+        = q.text_field :item
+
+    .book__form-item
+      = f.submit "送信する"

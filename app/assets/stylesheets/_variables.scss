@@ -888,9 +888,9 @@ $hr-border:                   $gray-lighter !default;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  background: -moz-linear-gradient(-135deg, #fff, #fff 10px, $primary-300, $primary-100 15px);
-  background: -webkit-linear-gradient(-135deg, #fff, #fff 10px, $primary-300, $primary-100 15px);
-  background: repeating-linear-gradient(-45deg, #fff, #fff 10px, $primary-300, $primary-100 15px);
+  // background: -moz-linear-gradient(-135deg, #fff, #fff 10px, $primary-300, $primary-100 15px);
+  // background: -webkit-linear-gradient(-135deg, #fff, #fff 10px, $primary-300, $primary-100 15px);
+  // background: repeating-linear-gradient(-45deg, #fff, #fff 10px, $primary-300, $primary-100 15px);
   box-sizing:border-box;
 }
 
@@ -899,6 +899,7 @@ $hr-border:                   $gray-lighter !default;
   max-width: 70vh;
   height: 100%;
   margin: 0 auto;
+  padding: 20px;
   background-color: $primary-900;
   border-right: 5px double #fff;
   border-left: 5px double #fff;

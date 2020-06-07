@@ -1,14 +1,17 @@
 %header
-  %ul.nav.nav-tabs.nav-fill.justify-content-center.w-100
-    - if user_signed_in?
+  .header_container
+    %ul.nav.nav-tabs
       %li.nav-item
-        = link_to 'HOME', root_path, class: "nav-item nav-link"
-      %li.nav-item
-        = link_to current_user.username, edit_user_registration_path, class: "nav-item nav-link"
-      %li.nav-item
-        = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-item nav-link"
-    - else
-      %li.nav-item
-        = link_to '新規登録', new_user_registration_path, class: "nav-item nav-link"
-      %li.nav-item
-        = link_to 'ログイン', new_user_session_path, class: "nav-item nav-link"
+        = link_to 'HOME', root_path, class: "nav-link"
+      - if user_signed_in?
+        %li.nav-item
+          = link_to 'wanna Question',  new_book_path, class: "nav-link"
+        %li.nav-item
+          = link_to 'wanna Answer',  books_path, class: "nav-link"
+        %li.nav-item
+          = link_to current_user.username, edit_user_registration_path, class: "nav-link"
+      - else
+        %li.nav-item
+          = link_to '新規登録', new_user_registration_path, class: "nav-link"
+        %li.nav-item
+          = link_to 'ログイン', new_user_session_path, class: "nav-link"
