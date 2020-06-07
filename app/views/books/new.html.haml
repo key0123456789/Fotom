@@ -16,9 +16,10 @@
       = f.select :genre, options_for_select_from_enum(Book, :genre)
 
     .book__form-item
-      = f.fields_for :questions do |q|
-        = q.label :item
-        = q.text_field :item
+      = f.fields_for :questions do |question|
+        = render 'question_fields', f: question
+      .book__form-item__add
+        = link_to_add_association '項目追加', f , :questions, class: 'btn btn-default'
 
     .book__form-item
       = f.submit "送信する"
