@@ -1,0 +1,14 @@
+.books
+  .header
+    %h1 Questions
+
+  .container
+    - if @books.present?
+      %ul.list-unstyled
+        - @books.each do |book|
+          %li
+            = link_to book_path(book.id) do
+              #{book.title}
+            #{t book.genre}
+    - else
+      %p 登録されているBookがありません

@@ -1,0 +1,25 @@
+%h1 Questions
+
+.book__form
+  = form_for @book do |f|
+
+    .book__form-item
+      = f.label :title
+      = f.text_field :title
+
+    .book__form-item
+      = f.label :overview, "概要"
+      = f.text_field :overview
+
+    .book__form-item
+      = f.label :genre, "ジャンル"
+      = f.select :genre, options_for_select_from_enum(Book, :genre)
+
+    .book__form-item
+      = f.fields_for :questions do |question|
+        = render 'question_fields', f: question
+      .book__form-item__add
+        = link_to_add_association '項目追加', f , :questions, class: 'btn btn-default'
+
+    .book__form-item
+      = f.submit "送信する"

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fotom</title>
+    <title>AsQ - アスク</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,11 +9,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
-
   <body>
+  <div id="container">
     <%= render "shared/header"%>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div id="container-inner">
+      <p class="notice"><%= notice %></p>
+      <%= render "shared/alert"%>
     <%= yield %>
+    </div>
+  </div>
   </body>
 </html>

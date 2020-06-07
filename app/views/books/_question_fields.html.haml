@@ -1,0 +1,11 @@
+.nested-fields.well.well-compact
+
+  .card
+    .card-body
+      .row
+        .col-sm-3
+          .form-group
+            = f.label :item, 'Q.'
+            = f.text_field :item, class: 'form-control'
+          .pb-2
+            = link_to_remove_association '削除', f, class: 'btn btn-default'

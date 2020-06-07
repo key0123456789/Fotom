@@ -16,9 +16,9 @@ export default {
     }
   },
   methods: {
-    countUp: function() [
+    countUp: function() {
       this.number += 1
-    ]
+    }
   }
 
 }

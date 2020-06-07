@@ -204,3 +204,13 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  enums:
+    book:
+      genre:
+        unset: 未設定
+        life: LIFE
+        love: LOVE
+        hobby: HOBBY
+        work: WORK
+        other: OTHER
+
